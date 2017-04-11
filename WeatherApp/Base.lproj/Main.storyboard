@@ -160,6 +160,9 @@
                             <constraint firstItem="a5C-t3-5d7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xga-UU-ytT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Smg-uy-ptn" id="12S-A7-ohh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
