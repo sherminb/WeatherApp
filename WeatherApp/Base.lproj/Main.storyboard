@@ -161,7 +161,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityName" destination="QZy-KR-5iX" id="Y0y-oL-4K6"/>
+                        <outlet property="imageView" destination="Ebx-o9-mt4" id="j1M-Hn-faL"/>
                         <outlet property="tableView" destination="Smg-uy-ptn" id="12S-A7-ohh"/>
+                        <outlet property="temperature" destination="PBd-dZ-wvL" id="0M5-3a-2Qp"/>
+                        <outlet property="todayDate" destination="lSc-Wx-1Xg" id="qQo-9U-0LI"/>
+                        <outlet property="weatherType" destination="ZNJ-aj-dxO" id="2vR-KG-3RF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

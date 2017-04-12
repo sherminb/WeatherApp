@@ -6,12 +6,6 @@ target 'WeatherApp' do
   use_frameworks!
 
   # Pods for WeatherApp
-
-  target 'WeatherAppTests' do
-    pod 'Alamofire', '~> 4.4'
-
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'Alamofire', '~> 4.4'
+  
 end

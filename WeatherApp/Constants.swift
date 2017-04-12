@@ -15,4 +15,6 @@ let lat = "35"
 let lon = "139"
 let currentUrl = "\(BASE_URL)\(lat)&lon=\(lon)&appid=\(API_KEY)"
 
+typealias CompletedCallback = ()->()
+
 
