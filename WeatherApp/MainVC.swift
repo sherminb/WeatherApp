@@ -35,6 +35,11 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         }
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getForcastWeatherData {}
+        
+    }
     func updateTodayWeather(){
         weatherType.text = currentWeather.weatherType
         cityName.text = currentWeather.cityName
@@ -49,8 +54,12 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return futureWeatherData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell{
+            let futureData = futureWeatherData[indexPath.row]
+            cell.loadData(data: futureData)
+            return cell
+        }
+        return WeatherCell()
     }
     func getForcastWeatherData(completed: @escaping CompletedCallback){
         Alamofire.request(forcastURL).responseJSON{response in
@@ -64,7 +73,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                     }
                 }
             }
-            
+            self.tableView.reloadData()
             
             completed()
         }
