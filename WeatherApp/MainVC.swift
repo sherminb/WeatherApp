@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -19,6 +20,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var imageView: UIImageView!
     
     var currentWeather:CurrentWeatherData!
+    var futureWeatherData: [FutureWeatherData] = [FutureWeatherData]()
     
     override func viewDidLoad() {
        
@@ -44,13 +46,30 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return futureWeatherData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
         return cell
     }
-    
+    func getForcastWeatherData(completed: @escaping CompletedCallback){
+        Alamofire.request(forcastURL).responseJSON{response in
+            let result = response.result
+            if let dict = result.value as? Dictionary<String,AnyObject>{
+                if let dataList = dict["list"] as? [Dictionary<String,AnyObject>]{
+                    
+                    for dataPoint in dataList{
+                        let nextDataPoint = FutureWeatherData(dict: dataPoint)
+                        self.futureWeatherData.append(nextDataPoint)
+                    }
+                }
+            }
+            
+            
+            completed()
+        }
+    }
+
 
 }
 
