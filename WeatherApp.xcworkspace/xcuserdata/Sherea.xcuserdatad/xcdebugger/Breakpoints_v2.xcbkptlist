@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherApp/MainVC.swift"
@@ -19,14 +19,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "WeatherApp.MainVC.(getForcastWeatherData (completed : () -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "WeatherApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sherea/Desktop/swift%20learning/WeatherApp/WeatherApp/MainVC.swift"
-                  timestampString = "513729214.05267"
+                  timestampString = "513729418.700412"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -34,14 +34,14 @@
                   offsetFromSymbolStart = "219">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "WeatherApp.MainVC.(getForcastWeatherData (completed : () -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "WeatherApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sherea/Desktop/swift%20learning/WeatherApp/WeatherApp/MainVC.swift"
-                  timestampString = "513729214.055255"
+                  timestampString = "513729418.70328"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
